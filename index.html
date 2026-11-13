@@ -16,8 +16,9 @@
 .timeline{position:relative;max-width:800px;margin:28px auto}.timeline:before{content:"";position:absolute;left:18px;top:0;bottom:0;width:2px;background:linear-gradient(#65dfff,#a78bfa,#d9b76c)}.event{position:relative;margin:0 0 22px 52px}.event:before{content:"";position:absolute;left:-41px;top:20px;width:14px;height:14px;border-radius:50%;background:#9beaff;box-shadow:0 0 18px #65dfff}.event img{width:100%;max-height:270px;object-fit:cover;border-radius:12px;margin-top:12px}.photo-slot{margin-top:14px;border:1px dashed #48617a;border-radius:14px;overflow:hidden;background:#08111e}.photo-slot img{display:block;width:100%;max-height:300px;object-fit:cover}.photo-placeholder{min-height:180px;place-items:center;text-align:center;padding:22px;color:#c4d6e8;background:radial-gradient(circle at center,#182d48,#08111e);line-height:1.7}.photo-placeholder small{color:#8da5bd}.portal-art{height:220px;border-radius:14px;display:grid;place-items:center;background:radial-gradient(ellipse,#bca3ff 0,#4b3b9c 15%,#1c275a 30%,#08111e 68%);overflow:hidden;position:relative}.portal-art:before{content:"";width:130px;height:190px;border:5px solid #b7a5ff;border-radius:50%;box-shadow:0 0 25px #b7a5ff,0 0 80px #8064ff,inset 0 0 35px #b7a5ff;animation:portal 4s ease-in-out infinite}.portal-art:after{content:"✦   ·   ✧    ·   ✦";position:absolute;color:#d9d2ff;letter-spacing:2em;animation:float 6s ease-in-out infinite}@keyframes portal{50%{transform:scaleX(.82) scaleY(1.05);filter:hue-rotate(25deg)}}@keyframes float{50%{transform:translateY(-16px)}}
 .modal{position:fixed;inset:0;z-index:50;background:#02050beF;display:none;overflow:auto;padding:24px}.modal.show{display:block}.modal-inner{max-width:900px;margin:30px auto;background:#0b1523;border:1px solid #38516a;border-radius:20px;overflow:hidden}.modal-hero{height:330px;position:relative}.modal-hero img{width:100%;height:100%;object-fit:cover;opacity:.8}.modal-hero:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#0b1523,transparent 75%)}.modal-title{position:absolute;bottom:15px;left:24px;z-index:1}.modal-body{padding:24px}.modal-close{float:right}.modal-gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.modal-gallery img{width:100%;height:170px;object-fit:cover;border-radius:12px}
 .quiz-options{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:16px}.quiz-options button{padding:14px;border-radius:12px;background:#101e30;border:1px solid #324c65;color:white;text-align:left}.quiz-options button:hover{border-color:var(--blue)}.result{display:grid;grid-template-columns:220px 1fr;gap:18px;align-items:center;margin-top:20px}.result img{width:100%;height:250px;object-fit:cover;border-radius:14px}.friday{position:fixed;right:18px;bottom:18px;z-index:25}.friday button{width:58px;height:58px;border-radius:50%;border:1px solid #83e5ff;background:radial-gradient(circle,#1d6485,#0a1b2a);color:white;font-size:1.35rem;box-shadow:0 0 25px #45cfff70}.chat{position:fixed;right:18px;bottom:88px;z-index:25;width:min(340px,calc(100vw - 36px));background:#0c1827;border:1px solid #4d7790;border-radius:18px;padding:16px;box-shadow:0 20px 60px #000a}.chat p{color:#d4e3ef;line-height:1.5}.chat .reply{background:#12253a;padding:12px;border-radius:12px;margin:10px 0}.secret-card{border:1px dashed #a78bfa;background:linear-gradient(140deg,#18172f,#0b1421);padding:24px;border-radius:18px}.footer{text-align:center;padding:45px 15px;color:#91a4b8;border-top:1px solid #1e2b3d;font-size:.85rem}.credits{color:#c4d2e1;line-height:1.8}.white-heart{color:#fff}
-@media(max-width:760px){.nav{display:none}.grid{grid-template-columns:repeat(2,1fr)}.char-card img{height:170px}.heart-layout{grid-template-columns:1fr}.modal-hero{height:240px}.result{grid-template-columns:1fr}.result img{height:260px}.section{padding:48px 0}.hero-characters{opacity:.45}.hero-characters img{object-position:center}.hero-center{padding-top:40px}.timer-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:420px){.grid{grid-template-columns:1fr}.char-card img{height:230px}.panel{padding:17px}.modal{padding:10px}.modal-inner{margin:10px auto}.modal-gallery{grid-template-columns:1fr}.hero-center h1{font-size:2.25rem}.hero-characters{grid-template-columns:repeat(5,1fr)}.hero-characters img{opacity:.38}}
+.memory-card{margin:0;padding:12px}.memory-card img{display:block;width:100%;height:300px;object-fit:cover;border-radius:12px}.memory-card figcaption{padding:12px 4px 3px;color:#c6d5e4;font-size:.9rem;line-height:1.5}.memories-grid{grid-template-columns:repeat(3,1fr)}
+@media(max-width:760px){.nav{display:none}.grid{grid-template-columns:repeat(2,1fr)}.char-card img{height:170px}.heart-layout{grid-template-columns:1fr}.modal-hero{height:240px}.result{grid-template-columns:1fr}.result img{height:260px}.section{padding:48px 0}.memories-grid{grid-template-columns:repeat(2,1fr)}.memory-card img{height:250px}.hero-characters{opacity:.45}.hero-characters img{object-position:center}.hero-center{padding-top:40px}.timer-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:420px){.memories-grid{grid-template-columns:1fr}.memory-card img{height:auto;max-height:420px}.grid{grid-template-columns:1fr}.char-card img{height:230px}.panel{padding:17px}.modal{padding:10px}.modal-inner{margin:10px auto}.modal-gallery{grid-template-columns:1fr}.hero-center h1{font-size:2.25rem}.hero-characters{grid-template-columns:repeat(5,1fr)}.hero-characters img{opacity:.38}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}}
 </style>
 </head>
@@ -127,15 +128,33 @@
    <article class="event panel">
     <div class="eyebrow">05/06/2026 • Uma noite inesquecível</div><h3>Henrique & Juliano</h3>
     <p>Uma noite que marcou a nossa história e ganhou seu próprio lugar na linha do tempo.</p>
-    <div class="photo-slot"><img src="fotos/show-henrique-juliano.jpg" alt="Foto do show de Henrique e Juliano" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><div class="photo-placeholder" style="display:none">Adicione aqui a foto do show<br><small>fotos/show-henrique-juliano.jpg</small></div></div>
+    <div class="photo-slot"><img src="fotos/show-henrique-juliano.jpg" alt="Show de Henrique e Juliano" loading="lazy"></div>
    </article>
    <article class="event panel">
     <div class="eyebrow">25/09/2026 • Um símbolo nosso</div><h3>A aliança</h3>
     <p>Um pequeno símbolo carregando uma escolha enorme: continuar escolhendo uma à outra. <span class="white-heart">🤍</span></p>
-    <div class="photo-slot"><img src="fotos/alianca.jpg" alt="Foto da aliança" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><div class="photo-placeholder" style="display:none">Adicione aqui a foto da aliança<br><small>fotos/alianca.jpg</small></div></div>
+    <div class="photo-slot"><img src="fotos/alianca.jpg" alt="Nossa aliança" loading="lazy"></div>
    </article>
   </div>
-  <p class="muted" style="text-align:center">As fotos do show e da aliança serão inseridas por você na pasta <code>fotos</code> antes da publicação.</p>
+  
+ </div>
+</section>
+
+
+<section class="section" id="memories">
+ <div class="wrap">
+  <div class="eyebrow">Registros pessoais • Arquivo afetivo</div>
+  <h2>Pequenos instantes, um universo inteiro</h2>
+  <p class="section-intro">Algumas das minhas lembranças favoritas têm o seu sorriso, o seu abraço e a sorte de ter você por perto. 🤍</p>
+  <div class="grid memories-grid" style="margin-top:24px">
+   <figure class="panel memory-card"><img src="fotos/lembranca-01.jpg" alt="Uma lembrança de Bárbara e Ellen" loading="lazy"><figcaption>Um instante nosso.</figcaption></figure>
+   <figure class="panel memory-card"><img src="fotos/lembranca-02.jpg" alt="Uma lembrança de Bárbara e Ellen" loading="lazy"><figcaption>Do tipo que eu guardaria para sempre.</figcaption></figure>
+   <figure class="panel memory-card"><img src="fotos/lembranca-03.jpg" alt="Uma lembrança de Bárbara e Ellen" loading="lazy"><figcaption>Meu lugar favorito é pertinho de você.</figcaption></figure>
+   <figure class="panel memory-card"><img src="fotos/lembranca-04.jpg" alt="Uma lembrança de Bárbara e Ellen" loading="lazy"><figcaption>Mais um capítulo da nossa história.</figcaption></figure>
+   <figure class="panel memory-card"><img src="fotos/lembranca-05.jpg" alt="Uma lembrança de Bárbara e Ellen" loading="lazy"><figcaption>Eu escolheria viver esse momento de novo.</figcaption></figure>
+   <figure class="panel memory-card"><img src="fotos/lembranca-06.jpg" alt="Uma lembrança de Bárbara e Ellen" loading="lazy"><figcaption>Com você, até o simples vira especial.</figcaption></figure>
+   <figure class="panel memory-card"><img src="fotos/lembranca-07.jpg" alt="Uma lembrança de Bárbara e Ellen" loading="lazy"><figcaption>E que venham muitos outros momentos.</figcaption></figure>
+  </div>
  </div>
 </section>
 
@@ -154,15 +173,12 @@
  <div class="wrap">
   <div class="eyebrow">Arquivo confidencial • Nós duas</div><h2>O que sabemos sobre nós?</h2>
   <p class="section-intro">Um pequeno teste de memória sobre a nossa história.</p>
-  <div class="panel">
-   <h3>Em qual data nossas histórias se cruzaram?</h3>
-   <div class="quiz-options">
-    <button onclick="relationshipAnswer(false)">05/06/2026</button>
-    <button onclick="relationshipAnswer(true)">30/10/2025</button>
-    <button onclick="relationshipAnswer(false)">25/09/2026</button>
-    <button onclick="relationshipAnswer(false)">01/01/2026</button>
+  <div class="panel" id="relationshipPanel" style="margin-top:20px">
+   <div id="relationshipQuestion">
+    <h3 id="relationshipTitle">1/5 • Em qual data nossas histórias se cruzaram?</h3>
+    <div class="quiz-options" id="relationshipOptions"></div>
    </div>
-   <p id="relationshipFeedback" class="muted" aria-live="polite"></p>
+   <div id="relationshipResult" class="hidden" aria-live="polite"></div>
   </div>
  </div>
 </section>
@@ -210,7 +226,7 @@
    <div class="eyebrow">Em todos os universos...</div>
    <h2 style="font-size:clamp(1.6rem,4vw,2.6rem)">Eu escolheria encontrar você em todos eles.</h2>
    <p style="max-width:760px;margin:12px auto;line-height:1.8">Eu te amo em todos os universos, em todas as linhas do tempo e em cada versão de nós duas. Se existissem infinitas possibilidades, eu ainda escolheria encontrar você em todas elas. Você é a minha pessoa, Ellen Victoria. <span class="white-heart">🤍</span></p>
-   <div class="photo-slot" style="max-width:650px;margin:20px auto"><img src="fotos/foto-final.jpg" alt="Foto de Bárbara e Ellen" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><div class="photo-placeholder" style="display:none">Adicione aqui uma foto especial de vocês<br><small>fotos/foto-final.jpg</small></div></div>
+   <div class="photo-slot" style="max-width:650px;margin:20px auto"><img src="fotos/foto-final.jpg" alt="Bárbara e Ellen" loading="lazy"></div>
    <h2 style="margin-top:25px">Você é a minha pessoa. <span class="white-heart">🤍</span></h2>
   </div>
   <div class="panel credits" style="margin-top:20px;text-align:center">
@@ -277,7 +293,17 @@ function startTimer(){function tick(){let start=new Date("2025-10-30T00:00:00-03
 document.getElementById("tapReactor").onclick=()=>{counter++;document.getElementById("counter").textContent=counter.toLocaleString("pt-BR")+" / 1.000.000.000";document.getElementById("meterFill").style.width=Math.min(100,counter/1e9*100)+"%";if(counter===10){alert("Tony deixou um recado: o verdadeiro núcleo deste universo é você, Ellen. 🤍")}};
 function renderQuiz(){let q=quiz[quizIndex];document.getElementById("qTitle").textContent=`${quizIndex+1}/${quiz.length} • ${q.q}`;document.getElementById("quizOptions").innerHTML=q.a.map(([label,key])=>`<button onclick="answerQuiz('${key}')">${label}</button>`).join("")}
 function answerQuiz(key){quizScores[key]=(quizScores[key]||0)+1;quizIndex++;if(quizIndex<quiz.length){renderQuiz();return}let winner=Object.keys(quizScores).sort((a,b)=>quizScores[b]-quizScores[a])[0],c=characters.find(x=>({natasha:"BW-001",tony:"IM-002",wanda:"SW-003",peter:"SP-004",kate:"KB-005"})[winner]===x.id);document.getElementById("quizQuestion").classList.add("hidden");document.getElementById("quizResult").classList.remove("hidden");document.getElementById("quizResult").innerHTML=`<div class="eyebrow">Identidade revelada</div><div class="result"><img src="${c.img}" alt="${c.name}"><div><h2>${c.name}</h2><h3>${c.alias}</h3><p>${c.desc}</p><p class="white-heart">🤍</p></div></div>`}
-function relationshipAnswer(ok){document.getElementById("relationshipFeedback").textContent=ok?"Identidade confirmada! Foi em 30/10/2025. 🤍":"Não foi essa data. Tente novamente."}
+const relationshipQuiz=[
+ {q:"Em qual data nossas histórias se cruzaram?",a:[["30/10/2025",true],["05/06/2026",false],["25/09/2026",false],["01/01/2026",false]]},
+ {q:"Por onde nos conhecemos?",a:[["Pelo Instagram",false],["Pelo Free Fire",true],["Na escola",false],["Por amigos em comum",false]]},
+ {q:"Qual foi o show que vivemos juntas?",a:[["Henrique & Juliano",true],["Jorge & Mateus",false],["Maiara & Maraisa",false],["Luan Santana",false]]},
+ {q:"Em que dia fomos ao show de Henrique & Juliano?",a:[["30/10/2025",false],["25/09/2026",false],["05/06/2026",true],["12/06/2026",false]]},
+ {q:"Qual data marca a nossa aliança?",a:[["05/06/2026",false],["25/09/2026",true],["30/10/2025",false],["25/10/2026",false]]}
+];
+let relationshipIndex=0,relationshipScore=0;
+function renderRelationshipQuiz(){const q=relationshipQuiz[relationshipIndex];document.getElementById("relationshipTitle").textContent=`${relationshipIndex+1}/${relationshipQuiz.length} • ${q.q}`;document.getElementById("relationshipOptions").innerHTML=q.a.map(([label,correct])=>`<button onclick="answerRelationship(${correct})">${label}</button>`).join("")}
+function answerRelationship(correct){if(correct)relationshipScore++;relationshipIndex++;if(relationshipIndex<relationshipQuiz.length){renderRelationshipQuiz();return}document.getElementById("relationshipQuestion").classList.add("hidden");document.getElementById("relationshipResult").classList.remove("hidden");let message=relationshipScore===5?"Você conhece cada detalhe da nossa história. Meu coração ficou todo bobo! 🤍":relationshipScore>=3?"Você lembrou de tanta coisa importante da gente. Cada detalhe faz parte da nossa história. 🤍":"Nossa história ainda tem muitos capítulos para revisitar — e muitos outros para viver juntinhas. 🤍";document.getElementById("relationshipResult").innerHTML=`<div class="eyebrow">Memórias sincronizadas</div><h2>${relationshipScore}/${relationshipQuiz.length} acertos</h2><p>${message}</p><button class="btn secondary" onclick="resetRelationshipQuiz()">Refazer quiz</button>`}
+function resetRelationshipQuiz(){relationshipIndex=0;relationshipScore=0;document.getElementById("relationshipResult").classList.add("hidden");document.getElementById("relationshipQuestion").classList.remove("hidden");renderRelationshipQuiz()}
 function toggleFriday(){document.getElementById("fridayChat").classList.toggle("hidden")}
 function openFriday(){document.getElementById("fridayChat").classList.remove("hidden")}
 function fridayLine(topic){let t={files:"Os cinco arquivos estão disponíveis na central. Abra todos para revelar o arquivo 006.",heart:"O reator guarda um contador e o tempo desde 30 de outubro de 2025.",secret:"Existe um projeto oculto. Procure os três pequenos sinais brancos espalhados pela experiência."};document.getElementById("fridayReply").textContent=t[topic]}
@@ -286,7 +312,7 @@ function openProject(){document.getElementById("projectModal").classList.add("sh
 function closeProject(){document.getElementById("projectModal").classList.remove("show")}
 function showUniverse(){let lines=["Em uma realidade, nossa primeira conversa durou horas.","Em outra, nos encontramos em uma cidade diferente.","Em todas, eu ainda escolheria você. 🤍"];document.getElementById("universeLine").textContent=lines[Math.floor(Math.random()*lines.length)]}
 function postCredits(){document.getElementById("postCreditText").classList.remove("hidden")}
-renderCharacters();renderQuiz();
+renderCharacters();renderQuiz();renderRelationshipQuiz();
 // Três pequenos sinais clicáveis, posicionados em pontos diferentes da experiência.
 document.querySelector("#heart-section h3").innerHTML+=' <button aria-label="Sinal secreto 1" onclick="addClue(1)" style="background:none;border:0;color:white;cursor:pointer">🤍</button>';
 document.querySelector("#command .section-intro").innerHTML+=' <button aria-label="Sinal secreto 2" onclick="addClue(2)" style="background:none;border:0;color:white;cursor:pointer">🤍</button>';
