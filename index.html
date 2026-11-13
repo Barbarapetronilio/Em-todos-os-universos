@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#070b13">
+<title>Em Todos os Universos</title>
+<style>
+:root{--bg:#060a12;--panel:#0c1422;--line:#24364b;--blue:#66d9ff;--cyan:#b8f2ff;--white:#f4f8ff;--muted:#9aaabe;--gold:#d9b76c;--red:#b84757;--purple:#a78bfa}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 50% 0%,#14233a 0,#080d17 45%,#05080e 100%);color:var(--white);font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;min-height:100vh}button,input{font:inherit}button{cursor:pointer}.hidden{display:none!important}.eyebrow{letter-spacing:.24em;text-transform:uppercase;font-size:.68rem;color:var(--blue)}.muted{color:var(--muted)}.heart{color:#fff}.wrap{width:min(1120px,92vw);margin:auto}.btn{border:1px solid #4c7794;background:linear-gradient(135deg,#17354b,#102235);color:#effaff;padding:12px 18px;border-radius:999px;box-shadow:0 0 24px #4dcfff1c;transition:.2s}.btn:hover{transform:translateY(-2px);box-shadow:0 0 28px #4dcfff40}.btn.secondary{background:#111a28;border-color:#33465c}.btn:disabled{opacity:.4;cursor:not-allowed}.panel{background:linear-gradient(145deg,#101b2aeb,#09111deF);border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:0 18px 50px #0005}.section{padding:64px 0}.section h2{font-size:clamp(1.8rem,4vw,3rem);margin:.25rem 0 12px}.section-intro{max-width:720px;color:#b6c5d7;line-height:1.7}.topbar{position:sticky;top:0;z-index:20;background:#060a12d9;backdrop-filter:blur(14px);border-bottom:1px solid #24364b;padding:12px 4vw;display:flex;justify-content:space-between;align-items:center;gap:12px}.brand{font-weight:800;letter-spacing:.12em;font-size:.8rem}.brand span{color:var(--blue)}.nav{display:flex;gap:8px;flex-wrap:wrap}.nav button{background:transparent;color:#b8c7d8;border:0;padding:8px 10px;border-radius:10px;font-size:.8rem}.nav button:hover{background:#17263a;color:white}
+#intro{min-height:100svh;display:grid;place-items:center;position:relative;overflow:hidden;padding:35px 0 55px;background:radial-gradient(circle at 50% 48%,#12314b 0,#091421 30%,#05080e 75%)}#intro:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#05080eaa,#05080e22 50%,#05080eaa),linear-gradient(0deg,#05080e 0,transparent 42%,#05080e99 100%);z-index:1}.stars{position:absolute;inset:0;opacity:.45;background-image:radial-gradient(#b6eaff 1px,transparent 1px),radial-gradient(#fff 1px,transparent 1px);background-size:73px 73px,113px 113px;background-position:0 0,30px 45px;animation:stars 24s linear infinite}@keyframes stars{to{background-position:200px 300px,-170px 210px}}
+.hero-characters{position:absolute;inset:0;display:grid;grid-template-columns:repeat(5,1fr);align-items:stretch;opacity:.64;filter:saturate(.85)}.hero-characters img{width:100%;height:100%;object-fit:cover;min-width:0;opacity:.68;mask-image:linear-gradient(to bottom,#000 35%,transparent 100%)}.hero-characters img:nth-child(2),.hero-characters img:nth-child(4){opacity:.46}.hero-center{position:relative;z-index:2;text-align:center;width:min(760px,92vw);padding:26px 18px}.hero-center h1{font-size:clamp(2.2rem,7vw,5.4rem);letter-spacing:.08em;text-transform:uppercase;margin:12px 0 5px;text-shadow:0 0 28px #64dfff65}.hero-center .sub{letter-spacing:.24em;text-transform:uppercase;color:#b4d7e8;font-size:.72rem}.tony-backdrop{position:absolute;z-index:0;left:50%;top:50%;transform:translate(-50%,-53%);width:min(560px,78vw);height:min(460px,62vh);object-fit:cover;object-position:center 30%;opacity:.37;filter:contrast(1.12) saturate(.75);mask-image:radial-gradient(ellipse,#000 30%,transparent 75%)}.reactor-wrap{position:relative;width:clamp(170px,31vw,290px);aspect-ratio:1;margin:18px auto 20px;display:grid;place-items:center;filter:drop-shadow(0 0 28px #3bbdff8a)}.reactor{width:78%;height:78%;border-radius:50%;position:relative;border:10px solid #6b8293;background:radial-gradient(circle,#f4ffff 0 9%,#8beeff 10% 17%,#168bc4 19% 27%,#092b49 29% 48%,#09121c 50% 62%,#9eb9c9 64% 68%,#142a3a 70%);box-shadow:inset 0 0 25px #c5f8ff,0 0 22px #64dfff,0 0 65px #198bce;animation:pulse 2.4s ease-in-out infinite}.reactor:before,.reactor:after{content:"";position:absolute;inset:-18%;border-radius:50%;border:2px solid #7ce5ff8c;animation:spin 10s linear infinite}.reactor:after{inset:-29%;border-style:dashed;border-color:#9aeaff70;animation:spin 18s linear infinite reverse}@keyframes pulse{50%{box-shadow:inset 0 0 42px #fff,0 0 45px #64dfff,0 0 100px #198bce;transform:scale(1.025)}}@keyframes spin{to{transform:rotate(360deg)}}
+.password-box{max-width:390px;margin:0 auto;background:#07111dd9;border:1px solid #5aa6c7;border-radius:16px;padding:16px;box-shadow:0 0 35px #40baff24}.password-box input{width:100%;padding:13px 14px;border-radius:10px;border:1px solid #38536b;background:#07101a;color:white;text-align:center;outline:none;margin:10px 0}.hint{font-size:.84rem;color:#c8d8e7}.hint strong{color:white}.hero-note{font-size:.86rem;color:#b3c4d4;margin-top:18px}
+#app{display:none}.dashboard-head{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}.status{border:1px solid #34516a;color:#aeeeff;padding:7px 12px;border-radius:99px;font-size:.72rem;letter-spacing:.12em}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.char-card{overflow:hidden;padding:0;cursor:pointer;text-align:left;color:white;border:1px solid #30475d;background:#0a1320;border-radius:17px;transition:.25s}.char-card:hover{transform:translateY(-5px);border-color:#70dfff;box-shadow:0 15px 35px #0007}.char-card img{width:100%;height:210px;object-fit:cover;display:block}.char-card .card-copy{padding:15px}.char-card h3{margin:0 0 5px}.symbol{font-size:1.7rem;color:var(--blue)}.tag{font-size:.68rem;color:#a9bdcf;letter-spacing:.12em;text-transform:uppercase}.meter{height:7px;background:#1b2a3c;border-radius:9px;overflow:hidden}.meter span{display:block;height:100%;background:linear-gradient(90deg,#2e95c7,#a5edff);width:0;transition:width .3s}
+#heart-section{background:radial-gradient(ellipse at center,#10243b,#060a12 70%)}.heart-layout{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:center}.tap-reactor{width:190px;height:190px;margin:0 auto 15px;border-radius:50%;border:0;background:radial-gradient(circle,#fff 0 7%,#a8efff 9% 15%,#1b9bd1 18% 27%,#0b2741 30% 52%,#b5d4e4 54% 60%,#102030 62%);box-shadow:0 0 25px #6bdfff,0 0 85px #208bc7;animation:pulse 2s infinite}.counter{font-size:clamp(1.8rem,5vw,3rem);font-variant-numeric:tabular-nums;color:#dffaff}.timer-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:18px}.time-cell{background:#0b1726;border:1px solid #2b4259;border-radius:12px;padding:13px 5px;text-align:center}.time-cell b{font-size:1.5rem;display:block;color:#e9fbff}.time-cell small{font-size:.66rem;color:#91a9bd;text-transform:uppercase;letter-spacing:.1em}
+.timeline{position:relative;max-width:800px;margin:28px auto}.timeline:before{content:"";position:absolute;left:18px;top:0;bottom:0;width:2px;background:linear-gradient(#65dfff,#a78bfa,#d9b76c)}.event{position:relative;margin:0 0 22px 52px}.event:before{content:"";position:absolute;left:-41px;top:20px;width:14px;height:14px;border-radius:50%;background:#9beaff;box-shadow:0 0 18px #65dfff}.event img{width:100%;max-height:270px;object-fit:cover;border-radius:12px;margin-top:12px}.photo-slot{margin-top:14px;border:1px dashed #48617a;border-radius:14px;overflow:hidden;background:#08111e}.photo-slot img{display:block;width:100%;max-height:300px;object-fit:cover}.photo-placeholder{min-height:180px;place-items:center;text-align:center;padding:22px;color:#c4d6e8;background:radial-gradient(circle at center,#182d48,#08111e);line-height:1.7}.photo-placeholder small{color:#8da5bd}.portal-art{height:220px;border-radius:14px;display:grid;place-items:center;background:radial-gradient(ellipse,#bca3ff 0,#4b3b9c 15%,#1c275a 30%,#08111e 68%);overflow:hidden;position:relative}.portal-art:before{content:"";width:130px;height:190px;border:5px solid #b7a5ff;border-radius:50%;box-shadow:0 0 25px #b7a5ff,0 0 80px #8064ff,inset 0 0 35px #b7a5ff;animation:portal 4s ease-in-out infinite}.portal-art:after{content:"✦   ·   ✧    ·   ✦";position:absolute;color:#d9d2ff;letter-spacing:2em;animation:float 6s ease-in-out infinite}@keyframes portal{50%{transform:scaleX(.82) scaleY(1.05);filter:hue-rotate(25deg)}}@keyframes float{50%{transform:translateY(-16px)}}
+.modal{position:fixed;inset:0;z-index:50;background:#02050beF;display:none;overflow:auto;padding:24px}.modal.show{display:block}.modal-inner{max-width:900px;margin:30px auto;background:#0b1523;border:1px solid #38516a;border-radius:20px;overflow:hidden}.modal-hero{height:330px;position:relative}.modal-hero img{width:100%;height:100%;object-fit:cover;opacity:.8}.modal-hero:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#0b1523,transparent 75%)}.modal-title{position:absolute;bottom:15px;left:24px;z-index:1}.modal-body{padding:24px}.modal-close{float:right}.modal-gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.modal-gallery img{width:100%;height:170px;object-fit:cover;border-radius:12px}
+.quiz-options{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:16px}.quiz-options button{padding:14px;border-radius:12px;background:#101e30;border:1px solid #324c65;color:white;text-align:left}.quiz-options button:hover{border-color:var(--blue)}.result{display:grid;grid-template-columns:220px 1fr;gap:18px;align-items:center;margin-top:20px}.result img{width:100%;height:250px;object-fit:cover;border-radius:14px}.friday{position:fixed;right:18px;bottom:18px;z-index:25}.friday button{width:58px;height:58px;border-radius:50%;border:1px solid #83e5ff;background:radial-gradient(circle,#1d6485,#0a1b2a);color:white;font-size:1.35rem;box-shadow:0 0 25px #45cfff70}.chat{position:fixed;right:18px;bottom:88px;z-index:25;width:min(340px,calc(100vw - 36px));background:#0c1827;border:1px solid #4d7790;border-radius:18px;padding:16px;box-shadow:0 20px 60px #000a}.chat p{color:#d4e3ef;line-height:1.5}.chat .reply{background:#12253a;padding:12px;border-radius:12px;margin:10px 0}.secret-card{border:1px dashed #a78bfa;background:linear-gradient(140deg,#18172f,#0b1421);padding:24px;border-radius:18px}.footer{text-align:center;padding:45px 15px;color:#91a4b8;border-top:1px solid #1e2b3d;font-size:.85rem}.credits{color:#c4d2e1;line-height:1.8}.white-heart{color:#fff}
+@media(max-width:760px){.nav{display:none}.grid{grid-template-columns:repeat(2,1fr)}.char-card img{height:170px}.heart-layout{grid-template-columns:1fr}.modal-hero{height:240px}.result{grid-template-columns:1fr}.result img{height:260px}.section{padding:48px 0}.hero-characters{opacity:.45}.hero-characters img{object-position:center}.hero-center{padding-top:40px}.timer-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:420px){.grid{grid-template-columns:1fr}.char-card img{height:230px}.panel{padding:17px}.modal{padding:10px}.modal-inner{margin:10px auto}.modal-gallery{grid-template-columns:1fr}.hero-center h1{font-size:2.25rem}.hero-characters{grid-template-columns:repeat(5,1fr)}.hero-characters img{opacity:.38}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<section id="intro">
+  <div class="stars"></div>
+  <div class="hero-characters" aria-hidden="true">
+    <img src="https://lumiere-a.akamaihd.net/v1/images/bbu-32704_r3_8068a280.jpeg?region=0%2C8%2C3528%2C1984" alt="">
+    <img src="https://media.lrytas.lt/images/2017/08/24/183304815-c6d1044d-8bbd-44d6-968c-5b39a05ae560.jpg" alt="">
+    <img src="https://cdn.mos.cms.futurecdn.net/8t8f9GPKRLsTQyg8XJz32B.jpeg" alt="">
+    <img src="https://s1.afisha.ru/mediastorage/13/1c/e0e866b7e84245e5b1c08c221c13.jpg" alt="">
+    <img src="https://lumiere-a.akamaihd.net/v1/images/05a23fa77c57155c75f71c31548800f9_4096x2730_d24a4485.jpeg?region=0%2C0%2C4096%2C2301" alt="">
+  </div>
+  <img class="tony-backdrop" src="https://media.lrytas.lt/images/2017/08/24/183304815-c6d1044d-8bbd-44d6-968c-5b39a05ae560.jpg" alt="Tony Stark com a armadura do Homem de Ferro">
+  <div class="hero-center">
+    <div class="eyebrow">Stark Industries • Acesso restrito</div>
+    <h1>Em Todos os Universos</h1>
+    <div class="sub">Uma missão. Cinco heróis. Uma história.</div>
+    <div class="reactor-wrap"><div class="reactor" aria-label="Reator Arc de Tony Stark"></div></div>
+    <div class="password-box">
+      <div class="eyebrow">Protocolo de autenticação</div>
+      <p style="margin:8px 0 2px">Digite a frase para desbloquear este universo</p>
+      <input id="pass" type="password" placeholder="Frase secreta" autocomplete="off">
+      <button class="btn" id="unlock">ATIVAR SISTEMA</button>
+      <p class="hint">Dica: <strong>A frase da nossa aliança 💍</strong></p>
+      <p id="passError" class="hint" style="color:#ff9eaa" aria-live="polite"></p>
+    </div>
+    <div class="hero-note">Uma experiência criada com amor por Bárbara <span class="white-heart">🤍</span></div>
+  </div>
+</section>
+
+<div id="app">
+<header class="topbar">
+  <div class="brand">S.H.I.E.L.D. <span>／ STARK SYSTEMS</span></div>
+  <nav class="nav">
+    <button onclick="go('heart-section')">O coração</button>
+    <button onclick="go('files')">Arquivos</button>
+    <button onclick="go('timeline')">Linha do tempo</button>
+    <button onclick="go('quiz')">Quiz</button>
+    <button onclick="go('final')">Declaração</button>
+  </nav>
+  <div class="status">● SISTEMA ONLINE</div>
+</header>
+
+<section class="section" id="heart-section">
+ <div class="wrap heart-layout">
+  <div>
+   <div class="eyebrow">Stark Industries • Núcleo central</div>
+   <h2>O Coração Desse Universo</h2>
+   <p class="section-intro">Alguns reatores mantêm armaduras funcionando. Este guarda uma das coisas mais importantes que eu tenho.</p>
+   <h3 style="font-size:1.6rem;margin:24px 0 5px">Eu te amo mil milhões, Ellen Victoria. <span class="white-heart">🤍</span></h3>
+   <p class="muted">Toque no reator para carregar o nosso universo.</p>
+  </div>
+  <div class="panel" style="text-align:center">
+   <button class="tap-reactor" id="tapReactor" aria-label="Tocar no reator Arc"></button>
+   <div class="eyebrow">Energia acumulada</div>
+   <div class="counter" id="counter">0 / 1.000.000.000</div>
+   <div class="meter" style="margin:12px 0 0"><span id="meterFill"></span></div>
+  </div>
+ </div>
+ <div class="wrap panel" style="margin-top:24px;text-align:center">
+  <div class="eyebrow">Tempo desde o nosso primeiro encontro</div>
+  <h3 style="margin:8px 0">30 de outubro de 2025</h3>
+  <div class="timer-grid" id="timer">
+   <div class="time-cell"><b id="days">0</b><small>Dias</small></div><div class="time-cell"><b id="hours">00</b><small>Horas</small></div><div class="time-cell"><b id="minutes">00</b><small>Minutos</small></div><div class="time-cell"><b id="seconds">00</b><small>Segundos</small></div>
+  </div>
+ </div>
+</section>
+
+<section class="section" id="command">
+ <div class="wrap">
+  <div class="dashboard-head"><div><div class="eyebrow">Central de comando • S.H.I.E.L.D.</div><h2>Bem-vinda, Ellen Victoria.</h2><p class="section-intro">A FRIDAY está online. Existem cinco arquivos principais aguardando autorização.</p></div><div class="status">AGENTE RECONHECIDA</div></div>
+  <div class="panel" style="margin-top:24px;display:grid;grid-template-columns:1fr auto;gap:15px;align-items:center">
+   <div><div class="eyebrow">Assistente de bordo</div><h3 style="margin:5px 0">FRIDAY</h3><p class="muted" style="margin:0">“Olá, Ellen. Tony deixou um sistema preparado especialmente para você. Recomendo explorar os arquivos. Há algo escondido por aqui.”</p></div>
+   <button class="btn" onclick="openFriday()">Conversar com FRIDAY</button>
+  </div>
+ </div>
+</section>
+
+<section class="section" id="files">
+ <div class="wrap">
+  <div class="eyebrow">Nível de acesso 05 • Arquivos confidenciais</div><h2>Os arquivos dos heróis</h2>
+  <p class="section-intro">Abra cada registro para conhecer os personagens que fazem parte do universo dela. Depois dos cinco, um sexto arquivo será liberado.</p>
+  <div class="grid" id="characterGrid" style="margin-top:25px"></div>
+  <div class="panel" style="margin-top:20px">
+   <div class="dashboard-head"><div><b>Arquivos desbloqueados</b><p class="muted" style="margin:4px 0 0"><span id="openedCount">0</span> de 5</p></div><div class="status" id="accessStatus">ACESSO PARCIAL</div></div>
+   <div class="meter" style="margin-top:13px"><span id="fileMeter"></span></div>
+  </div>
+  <div id="sixthFile" class="secret-card hidden" style="margin-top:22px">
+   <div class="eyebrow">Arquivo especial • Nível máximo</div><h3>ARQUIVO 006 — ELLEN VICTORIA</h3>
+   <p>“Algumas pessoas não cabem em uma ficha de herói. Algumas são o motivo de toda a missão.”</p>
+   <button class="btn" onclick="openEllenFile()">Abrir arquivo secreto</button>
+  </div>
+ </div>
+</section>
+
+<section class="section" id="timeline">
+ <div class="wrap">
+  <div class="eyebrow">Registro temporal • Linha de acontecimentos</div><h2>O início da nossa história</h2>
+  <p class="section-intro">Cada data guarda um capítulo. Algumas lembranças têm fotografia; outras merecem uma representação simbólica.</p>
+  <div class="timeline">
+   <article class="event panel">
+    <div class="eyebrow">30/10/2025 • Ponto de origem</div><h3>Onde tudo começou</h3>
+    <div class="portal-art" aria-label="Portal cósmico entre universos"></div>
+    <p>De todos os encontros que poderiam acontecer, o nosso foi o que mudou tudo. <span class="white-heart">🤍</span></p>
+   </article>
+   <article class="event panel">
+    <div class="eyebrow">05/06/2026 • Uma noite inesquecível</div><h3>Henrique & Juliano</h3>
+    <p>Uma noite que marcou a nossa história e ganhou seu próprio lugar na linha do tempo.</p>
+    <div class="photo-slot"><img src="fotos/show-henrique-juliano.jpg" alt="Foto do show de Henrique e Juliano" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><div class="photo-placeholder" style="display:none">Adicione aqui a foto do show<br><small>fotos/show-henrique-juliano.jpg</small></div></div>
+   </article>
+   <article class="event panel">
+    <div class="eyebrow">25/09/2026 • Um símbolo nosso</div><h3>A aliança</h3>
+    <p>Um pequeno símbolo carregando uma escolha enorme: continuar escolhendo uma à outra. <span class="white-heart">🤍</span></p>
+    <div class="photo-slot"><img src="fotos/alianca.jpg" alt="Foto da aliança" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><div class="photo-placeholder" style="display:none">Adicione aqui a foto da aliança<br><small>fotos/alianca.jpg</small></div></div>
+   </article>
+  </div>
+  <p class="muted" style="text-align:center">As fotos do show e da aliança serão inseridas por você na pasta <code>fotos</code> antes da publicação.</p>
+ </div>
+</section>
+
+<section class="section" id="quiz">
+ <div class="wrap">
+  <div class="eyebrow">Avaliação de compatibilidade • Multiverso</div><h2>Qual personagem vive em você?</h2>
+  <p class="section-intro">Responda com o que mais combina com sua personalidade. No final, um personagem será revelado.</p>
+  <div class="panel" id="quizPanel" style="margin-top:20px">
+   <div id="quizQuestion"><h3 id="qTitle">Quando tudo fica difícil, você costuma…</h3><div class="quiz-options" id="quizOptions"></div></div>
+   <div id="quizResult" class="hidden"></div>
+  </div>
+ </div>
+</section>
+
+<section class="section" id="us">
+ <div class="wrap">
+  <div class="eyebrow">Arquivo confidencial • Nós duas</div><h2>O que sabemos sobre nós?</h2>
+  <p class="section-intro">Um pequeno teste de memória sobre a nossa história.</p>
+  <div class="panel">
+   <h3>Em qual data nossas histórias se cruzaram?</h3>
+   <div class="quiz-options">
+    <button onclick="relationshipAnswer(false)">05/06/2026</button>
+    <button onclick="relationshipAnswer(true)">30/10/2025</button>
+    <button onclick="relationshipAnswer(false)">25/09/2026</button>
+    <button onclick="relationshipAnswer(false)">01/01/2026</button>
+   </div>
+   <p id="relationshipFeedback" class="muted" aria-live="polite"></p>
+  </div>
+ </div>
+</section>
+
+<section class="section" id="project">
+ <div class="wrap">
+  <div class="secret-card">
+   <div class="eyebrow">Projeto oculto • Acesso criptografado</div>
+   <h2>Projeto: Minha Pessoa</h2>
+   <p>Há três sinais escondidos pelo sistema. Encontre os três símbolos 🤍 espalhados pelas páginas para revelar o projeto.</p>
+   <div class="dashboard-head"><span id="clueCount">Sinais encontrados: 0/3</span><span class="status">PROTOCOLO OCULTO</span></div>
+   <div class="meter" style="margin:15px 0"><span id="clueMeter"></span></div>
+   <button class="btn" id="projectButton" disabled onclick="openProject()">Projeto bloqueado</button>
+   <p class="muted" style="font-size:.78rem;margin-bottom:0">Dica: toque nos pequenos corações brancos que aparecem ao longo da experiência.</p>
+  </div>
+ </div>
+</section>
+
+<section class="section" id="multiverse">
+ <div class="wrap">
+  <div class="eyebrow">Multiverso • Infinitas possibilidades</div><h2>E se existissem outros universos?</h2>
+  <div class="panel">
+   <p>Em outro universo, talvez tivéssemos nos conhecido antes.</p>
+   <p>Em outro, talvez nossa primeira conversa fosse diferente.</p>
+   <p>Em todos eles, eu ainda procuraria você. <span class="white-heart">🤍</span></p>
+   <button class="btn" onclick="showUniverse()">Explorar outra realidade</button>
+   <p id="universeLine" class="muted"></p>
+  </div>
+ </div>
+</section>
+
+<section class="section" id="final">
+ <div class="wrap">
+  <div class="eyebrow">Último registro • Declaração final</div>
+  <h2>Eu te amo de todas as formas que a Marvel me ensinou.</h2>
+  <p class="section-intro">Existem muitas formas de demonstrar amor. E, de alguma maneira, cada um desses personagens me ensinou uma forma diferente de expressar o que sinto por você.</p>
+  <div class="grid" style="margin-top:24px">
+   <article class="panel"><div class="symbol">◉</div><h3>Tony Stark — Homem de Ferro</h3><p>“Eu te amo mil milhões. E não importa quantas armaduras eu construa, você sempre será o meu verdadeiro coração.”</p></article>
+   <article class="panel"><div class="symbol" style="color:#e28c9c">♛</div><h3>Wanda Maximoff — Feiticeira Escarlate</h3><p>“Eu criaria uma realidade inteira só para estar ao seu lado, porque, em qualquer universo possível, é você que eu escolho.”</p></article>
+   <article class="panel"><div class="symbol" style="color:#e76d76">🕸</div><h3>Peter Parker — Homem-Aranha</h3><p>“Você é o meu caminho para casa. Com você, nem preciso do sentido aranha para saber que estou exatamente onde deveria estar.”</p></article>
+   <article class="panel"><div class="symbol" style="color:#d6dce8">⌛</div><h3>Natasha Romanoff — Viúva Negra</h3><p>“No meio de qualquer batalha ou caos do mundo, você é a minha maior certeza e a pessoa em quem confio de olhos fechados.”</p></article>
+   <article class="panel"><div class="symbol" style="color:#b49bff">➶</div><h3>Kate Bishop</h3><p>“De todas as flechas que eu já atirei na vida, você foi o único alvo que acertou bem no centro do meu coração.”</p></article>
+  </div>
+  <div class="panel" style="margin-top:20px;text-align:center">
+   <div class="eyebrow">Em todos os universos...</div>
+   <h2 style="font-size:clamp(1.6rem,4vw,2.6rem)">Eu escolheria encontrar você em todos eles.</h2>
+   <p style="max-width:760px;margin:12px auto;line-height:1.8">Eu te amo em todos os universos, em todas as linhas do tempo e em cada versão de nós duas. Se existissem infinitas possibilidades, eu ainda escolheria encontrar você em todas elas. Você é a minha pessoa, Ellen Victoria. <span class="white-heart">🤍</span></p>
+   <div class="photo-slot" style="max-width:650px;margin:20px auto"><img src="fotos/foto-final.jpg" alt="Foto de Bárbara e Ellen" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><div class="photo-placeholder" style="display:none">Adicione aqui uma foto especial de vocês<br><small>fotos/foto-final.jpg</small></div></div>
+   <h2 style="margin-top:25px">Você é a minha pessoa. <span class="white-heart">🤍</span></h2>
+  </div>
+  <div class="panel credits" style="margin-top:20px;text-align:center">
+   <div class="eyebrow">Créditos</div>
+   DIRIGIDO E PRODUZIDO COM AMOR POR BÁRBARA<br>
+   ESTRELANDO: ELLEN VICTORIA
+  </div>
+  <div class="panel" style="margin-top:20px;text-align:center">
+   <button class="btn secondary" onclick="postCredits()">Assistir à cena pós-créditos</button>
+   <p id="postCreditText" class="hidden" style="line-height:1.8;margin-top:18px">Se eu pudesse escolher uma única missão para todas as minhas versões em todos os universos, seria sempre a mesma: encontrar você, cuidar do nosso amor e continuar escolhendo a gente. Eu te amo. <span class="white-heart">🤍</span></p>
+  </div>
+ </div>
+</section>
+<footer class="footer">Em Todos os Universos • Uma experiência criada por Bárbara para Ellen Victoria <span class="white-heart">🤍</span><br><small>Imagens dos personagens carregadas de fontes externas; é necessária conexão com a internet. Projeto pessoal de fã, não oficial nem afiliado à Marvel/Disney.</small></footer>
+</div>
+
+<div class="friday"><button onclick="toggleFriday()" aria-label="Abrir FRIDAY">F</button></div>
+<div class="chat hidden" id="fridayChat">
+ <div class="dashboard-head"><b>FRIDAY // Assistente</b><button class="btn secondary" style="padding:5px 10px" onclick="toggleFriday()">×</button></div>
+ <div class="reply" id="fridayReply">Olá, Ellen. Estou aqui para acompanhar sua missão. 🤍</div>
+ <div style="display:flex;gap:8px;flex-wrap:wrap">
+  <button class="btn secondary" onclick="fridayLine('files')">Ver arquivos</button>
+  <button class="btn secondary" onclick="fridayLine('heart')">O coração</button>
+  <button class="btn secondary" onclick="fridayLine('secret')">Há algo secreto?</button>
+ </div>
+ <p class="muted" style="font-size:.72rem">FRIDAY é uma guia interativa com mensagens pré-programadas neste protótipo.</p>
+</div>
+
+<div class="modal" id="characterModal">
+ <div class="modal-inner">
+  <div class="modal-hero"><img id="modalImage" src="" alt=""><div class="modal-title"><div class="eyebrow" id="modalId"></div><h2 id="modalName" style="margin:4px 0"></h2></div></div>
+  <div class="modal-body"><button class="btn secondary modal-close" onclick="closeModal()">Fechar arquivo</button><div class="symbol" id="modalSymbol"></div><p id="modalDescription" style="line-height:1.7;color:#c5d4e3"></p><div class="modal-gallery" id="modalGallery"></div><h3>Registro pessoal</h3><p id="modalNote" style="line-height:1.7"></p><div style="clear:both"></div></div>
+ </div>
+</div>
+<div class="modal" id="ellenModal"><div class="modal-inner"><div class="modal-body"><button class="btn secondary modal-close" onclick="closeEllenFile()">Fechar</button><div class="eyebrow">Arquivo 006 • Classificação máxima</div><h2>Ellen Victoria</h2><p style="line-height:1.8">Nome: Ellen Victoria<br>Status: pessoa escolhida em todos os universos<br>Observação: não existe tecnologia capaz de medir o quanto ela é especial para Bárbara.</p><p>“Entre tantos heróis, histórias e universos, você continua sendo a minha descoberta favorita.” <span class="white-heart">🤍</span></p></div></div></div>
+<div class="modal" id="projectModal"><div class="modal-inner"><div class="modal-body"><button class="btn secondary modal-close" onclick="closeProject()">Fechar</button><div class="eyebrow">Projeto desbloqueado</div><h2>Projeto: Minha Pessoa</h2><p style="line-height:1.8">Relatório final: o maior acontecimento deste universo não foi uma batalha, uma armadura ou uma viagem no tempo. Foi encontrar você.</p><p>“Se todas as realidades fossem apagadas e eu pudesse salvar apenas uma lembrança, escolheria o momento em que nossas histórias começaram a se cruzar.” <span class="white-heart">🤍</span></p></div></div></div>
+
+<script>
+const characters=[
+ {id:"BW-001",name:"Natasha Romanoff",alias:"Viúva Negra",symbol:"⌛",color:"#d96b79",img:"https://lumiere-a.akamaihd.net/v1/images/bbu-32704_r3_8068a280.jpeg?region=0%2C8%2C3528%2C1984",gallery:["https://lumiere-a.akamaihd.net/v1/images/fbg7020_comp_v003_bf38a189.jpeg?region=516%2C0%2C2968%2C1670","https://lumiere-a.akamaihd.net/v1/images/bbu-32704_r3_8068a280.jpeg?region=0%2C8%2C3528%2C1984"],desc:"Espiã, estrategista e uma das figuras mais determinadas dos Vingadores. Natasha combina coragem, inteligência e lealdade. Seu símbolo no arquivo é a ampulheta vermelha.",note:"No meio de qualquer batalha ou caos do mundo, você é a minha maior certeza e a pessoa em quem confio de olhos fechados."},
+ {id:"IM-002",name:"Tony Stark",alias:"Homem de Ferro",symbol:"◉",color:"#72dcff",img:"https://media.lrytas.lt/images/2017/08/24/183304815-c6d1044d-8bbd-44d6-968c-5b39a05ae560.jpg",gallery:["https://townsquare.media/site/442/files/2012/04/Avengers19.jpg?format=natural&q=75&w=1200","https://media.lrytas.lt/images/2017/08/24/183304815-c6d1044d-8bbd-44d6-968c-5b39a05ae560.jpg"],desc:"Gênio, inventor e criador de uma armadura que mudou o destino dos Vingadores. O reator Arc representa sua inteligência, coragem e capacidade de transformar tudo.",note:"Eu te amo mil milhões. E não importa quantas armaduras eu construa, você sempre será o meu verdadeiro coração."},
+ {id:"SW-003",name:"Wanda Maximoff",alias:"Feiticeira Escarlate",symbol:"♛",color:"#e28c9c",img:"https://cdn.mos.cms.futurecdn.net/8t8f9GPKRLsTQyg8XJz32B.jpeg",gallery:["https://mr.comingsoon.it/imgdb/PrimoPiano/197577_ppl.jpg","https://cdn.mos.cms.futurecdn.net/8t8f9GPKRLsTQyg8XJz32B.jpeg"],desc:"Uma das personagens mais poderosas do universo Marvel. Wanda manipula energia e realidade; sua coroa representa sua transformação na Feiticeira Escarlate.",note:"Eu criaria uma realidade inteira só para estar ao seu lado, porque, em qualquer universo possível, é você que eu escolho."},
+ {id:"SP-004",name:"Peter Parker",alias:"Homem-Aranha",symbol:"🕸",color:"#e76d76",img:"https://s1.afisha.ru/mediastorage/13/1c/e0e866b7e84245e5b1c08c221c13.jpg",gallery:["https://de.web.img3.acsta.net/img/84/32/8432fa2157f7494ec430627d82fe0e6d.jpg","https://s1.afisha.ru/mediastorage/13/1c/e0e866b7e84245e5b1c08c221c13.jpg"],desc:"Peter Parker é inteligente, engraçado e corajoso, mesmo quando está com medo. Seu emblema de aranha lembra que grandes responsabilidades também podem nascer de um coração enorme.",note:"Você é o meu caminho para casa. Com você, nem preciso do sentido aranha para saber que estou exatamente onde deveria estar."},
+ {id:"KB-005",name:"Kate Bishop",alias:"Gaviã Arqueira",symbol:"➶",color:"#b49bff",img:"https://lumiere-a.akamaihd.net/v1/images/05a23fa77c57155c75f71c31548800f9_4096x2730_d24a4485.jpeg?region=0%2C0%2C4096%2C2301",gallery:["https://lumiere-a.akamaihd.net/v1/images/05a23fa77c57155c75f71c31548800f9_4096x2730_d24a4485.jpeg?region=0%2C0%2C4096%2C2301","https://lumiere-a.akamaihd.net/v1/images/05a23fa77c57155c75f71c31548800f9_4096x2730_d24a4485.jpeg?region=0%2C0%2C4096%2C2301"],desc:"Arqueira habilidosa, determinada e espirituosa. Kate prova que coragem não depende de superpoderes; seu arco e flecha representam foco e personalidade.",note:"De todas as flechas que eu já atirei na vida, você foi o único alvo que acertou bem no centro do meu coração."}
+];
+let opened=new Set(),counter=0,clues=new Set(),quizIndex=0,quizScores={};
+const quiz=[
+ {q:"Quando tudo fica difícil, você costuma…",a:[["Proteger quem amo, mesmo em silêncio","natasha"],["Inventar uma solução improvável","tony"],["Sentir tudo intensamente e seguir em frente","wanda"],["Tentar fazer o certo, mesmo com medo","peter"]]},
+ {q:"Qual seria sua maior força?",a:[["Lealdade","natasha"],["Criatividade","tony"],["Intuição","wanda"],["Coragem","kate"]]},
+ {q:"Em uma equipe, você seria…",a:[["A estrategista","natasha"],["A mente inventora","tony"],["A força imprevisível","wanda"],["A arqueira determinada","kate"]]},
+ {q:"O que mais combina com você?",a:[["Discrição e observação","natasha"],["Humor e confiança","tony"],["Sensibilidade e intensidade","wanda"],["Esperança e espontaneidade","peter"]]}
+];
+function norm(s){return (s||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().replace(/\s+/g," ").trim()}
+function unlock(){let v=norm(document.getElementById("pass").value);if(v===norm("você é a minha pessoa")){document.getElementById("intro").style.transition="opacity 1s";document.getElementById("intro").style.opacity="0";setTimeout(()=>{document.getElementById("intro").style.display="none";document.getElementById("app").style.display="block";window.scrollTo(0,0);startTimer();},900)}else{document.getElementById("passError").textContent="Acesso negado. Tente lembrar da frase da aliança.";}}
+document.getElementById("unlock").addEventListener("click",unlock);document.getElementById("pass").addEventListener("keydown",e=>{if(e.key==="Enter")unlock()});
+function go(id){document.getElementById(id).scrollIntoView({behavior:"smooth"})}
+function renderCharacters(){let g=document.getElementById("characterGrid");g.innerHTML="";characters.forEach(c=>{let b=document.createElement("button");b.className="char-card";b.innerHTML=`<img src="${c.img}" alt="${c.name}" loading="lazy"><div class="card-copy"><div class="tag">Arquivo ${c.id}</div><div class="symbol">${c.symbol}</div><h3>${c.name}</h3><div class="muted">${c.alias}</div><div class="tag" style="margin-top:10px">${opened.has(c.id)?"ACESSO CONCEDIDO":"TOQUE PARA ABRIR"}</div></div>`;b.onclick=()=>openCharacter(c.id);g.appendChild(b)})}
+function openCharacter(id){let c=characters.find(x=>x.id===id);opened.add(id);document.getElementById("modalImage").src=c.img;document.getElementById("modalImage").alt=c.name;document.getElementById("modalId").textContent="REGISTRO "+c.id+" • ACESSO AUTORIZADO";document.getElementById("modalName").textContent=c.name;document.getElementById("modalSymbol").textContent=c.symbol;document.getElementById("modalDescription").textContent=c.desc;document.getElementById("modalNote").textContent=c.note;document.getElementById("modalGallery").innerHTML=c.gallery.map((u,i)=>`<img src="${u}" alt="${c.name} — imagem ${i+1}" loading="lazy">`).join("");document.getElementById("characterModal").classList.add("show");updateFiles();renderCharacters()}
+function closeModal(){document.getElementById("characterModal").classList.remove("show")}
+function updateFiles(){let n=opened.size;document.getElementById("openedCount").textContent=n;document.getElementById("fileMeter").style.width=(n/5*100)+"%";document.getElementById("accessStatus").textContent=n===5?"TODOS LIBERADOS":"ACESSO PARCIAL";if(n===5)document.getElementById("sixthFile").classList.remove("hidden")}
+function openEllenFile(){document.getElementById("ellenModal").classList.add("show")}
+function closeEllenFile(){document.getElementById("ellenModal").classList.remove("show")}
+function startTimer(){function tick(){let start=new Date("2025-10-30T00:00:00-03:00"),diff=Math.max(0,Date.now()-start.getTime()),s=Math.floor(diff/1000);document.getElementById("days").textContent=Math.floor(s/86400).toLocaleString("pt-BR");document.getElementById("hours").textContent=String(Math.floor(s%86400/3600)).padStart(2,"0");document.getElementById("minutes").textContent=String(Math.floor(s%3600/60)).padStart(2,"0");document.getElementById("seconds").textContent=String(s%60).padStart(2,"0")}tick();setInterval(tick,1000)}
+document.getElementById("tapReactor").onclick=()=>{counter++;document.getElementById("counter").textContent=counter.toLocaleString("pt-BR")+" / 1.000.000.000";document.getElementById("meterFill").style.width=Math.min(100,counter/1e9*100)+"%";if(counter===10){alert("Tony deixou um recado: o verdadeiro núcleo deste universo é você, Ellen. 🤍")}};
+function renderQuiz(){let q=quiz[quizIndex];document.getElementById("qTitle").textContent=`${quizIndex+1}/${quiz.length} • ${q.q}`;document.getElementById("quizOptions").innerHTML=q.a.map(([label,key])=>`<button onclick="answerQuiz('${key}')">${label}</button>`).join("")}
+function answerQuiz(key){quizScores[key]=(quizScores[key]||0)+1;quizIndex++;if(quizIndex<quiz.length){renderQuiz();return}let winner=Object.keys(quizScores).sort((a,b)=>quizScores[b]-quizScores[a])[0],c=characters.find(x=>({natasha:"BW-001",tony:"IM-002",wanda:"SW-003",peter:"SP-004",kate:"KB-005"})[winner]===x.id);document.getElementById("quizQuestion").classList.add("hidden");document.getElementById("quizResult").classList.remove("hidden");document.getElementById("quizResult").innerHTML=`<div class="eyebrow">Identidade revelada</div><div class="result"><img src="${c.img}" alt="${c.name}"><div><h2>${c.name}</h2><h3>${c.alias}</h3><p>${c.desc}</p><p class="white-heart">🤍</p></div></div>`}
+function relationshipAnswer(ok){document.getElementById("relationshipFeedback").textContent=ok?"Identidade confirmada! Foi em 30/10/2025. 🤍":"Não foi essa data. Tente novamente."}
+function toggleFriday(){document.getElementById("fridayChat").classList.toggle("hidden")}
+function openFriday(){document.getElementById("fridayChat").classList.remove("hidden")}
+function fridayLine(topic){let t={files:"Os cinco arquivos estão disponíveis na central. Abra todos para revelar o arquivo 006.",heart:"O reator guarda um contador e o tempo desde 30 de outubro de 2025.",secret:"Existe um projeto oculto. Procure os três pequenos sinais brancos espalhados pela experiência."};document.getElementById("fridayReply").textContent=t[topic]}
+function addClue(id){if(clues.has(id))return;clues.add(id);document.getElementById("clueCount").textContent=`Sinais encontrados: ${clues.size}/3`;document.getElementById("clueMeter").style.width=(clues.size/3*100)+"%";if(clues.size===3){document.getElementById("projectButton").disabled=false;document.getElementById("projectButton").textContent="Desbloquear Projeto: Minha Pessoa"}}
+function openProject(){document.getElementById("projectModal").classList.add("show")}
+function closeProject(){document.getElementById("projectModal").classList.remove("show")}
+function showUniverse(){let lines=["Em uma realidade, nossa primeira conversa durou horas.","Em outra, nos encontramos em uma cidade diferente.","Em todas, eu ainda escolheria você. 🤍"];document.getElementById("universeLine").textContent=lines[Math.floor(Math.random()*lines.length)]}
+function postCredits(){document.getElementById("postCreditText").classList.remove("hidden")}
+renderCharacters();renderQuiz();
+// Três pequenos sinais clicáveis, posicionados em pontos diferentes da experiência.
+document.querySelector("#heart-section h3").innerHTML+=' <button aria-label="Sinal secreto 1" onclick="addClue(1)" style="background:none;border:0;color:white;cursor:pointer">🤍</button>';
+document.querySelector("#command .section-intro").innerHTML+=' <button aria-label="Sinal secreto 2" onclick="addClue(2)" style="background:none;border:0;color:white;cursor:pointer">🤍</button>';
+document.querySelector("#multiverse h2").innerHTML+=' <button aria-label="Sinal secreto 3" onclick="addClue(3)" style="background:none;border:0;color:white;cursor:pointer">🤍</button>';
+</script>
+</body>
+</html>
